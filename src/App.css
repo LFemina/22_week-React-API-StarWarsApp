@@ -1,38 +1,81 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.logo {
+  width: 6rem;
+}
+
+#request {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 70%;
+  gap: 1rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.reqItems {
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#label {
+  font-size: 28px;
+  font-weight: bolder;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+#entity {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+#idNum {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+#fetchBtn {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-color: goldenrod;
+  border-color: black;
+  border-width: 4px;
+  font-weight: bold;
+}
+
+.result {
+  font-weight: bolder;
+  font-size: 36px;
+  color: goldenrod;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 26px;
 }
